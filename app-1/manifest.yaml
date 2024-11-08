@@ -41,12 +41,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress   
 metadata:
     name: app1
-    namespace: expense
+    # namespace: expense
     annotations:
          kubernetes.io/ingress.class: alb
         alb.ingress.kubernetes.io/scheme: internet-facing
         alb.ingress.kubernetes.io/target-type: ip
-        alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:537124943253:certificate/bad22ba1-69d0-4288-8991-5c7327645adf   #create certificate for Domain:*.telugudevops.online
+        alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:537124943253:certificate/bad22ba1-69d0-4288-8991-5c7327645adf  #create certificate for Domain:*.telugudevops.online
         alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
         alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
         alb.ingress.kubernetes.io/group.name: expense
