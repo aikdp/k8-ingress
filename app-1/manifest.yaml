@@ -31,10 +31,10 @@ spec:
     name: app1
     tier: frontend
   ports:
-    - name: nginx-svc-port
-      protocol: TCP
-      port: 80
-      targetPort: 80
+  - name: nginx-svc-port
+    protocol: TCP
+    port: 80
+    targetPort: 80
 ---
 #Adding ingress controler, name itself ingress,. 
 apiVersion: networking.k8s.io/v1
@@ -42,7 +42,7 @@ kind: Ingress
 metadata:
     name: app1
     annotations:
-         kubernetes.io/ingress.class: alb
+        kubernetes.io/ingress.class: alb
         alb.ingress.kubernetes.io/scheme: internet-facing
         alb.ingress.kubernetes.io/target-type: ip
         alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:537124943253:certificate/bad22ba1-69d0-4288-8991-5c7327645adf
