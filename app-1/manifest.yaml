@@ -18,7 +18,7 @@ spec:
         tier: frontend
     spec:
       containers:
-        - name: nginx
+        - name: app1
           # image: nginx:stable-perl
           image: kdprasad028/app1:v1
 ---
