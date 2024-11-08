@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: app1
   labels:
-    app: app1
+    name: app1
     tier: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app1
+      name: app1
       tier: frontend
   template:
     metadata:
       labels:
-        app: app1
+        name: app1
         tier: frontend
     spec:
       containers:
@@ -28,7 +28,7 @@ metadata:
   name: app-1
 spec:
   selector:
-    app: app1
+    name: app1
     tier: frontend
   ports:
     - name: nginx-svc-port
